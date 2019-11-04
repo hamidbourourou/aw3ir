@@ -16,5 +16,5 @@ function validation() {
       
 
 
-                  }            // Function returns the product of a and b
+                  }            
   }
