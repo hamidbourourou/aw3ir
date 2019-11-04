@@ -28,16 +28,26 @@
         <h1>tp2</h1>
         
         <form on submit ="validation()">
-            <label for="nom"> Nom </label>
-            <input type ="text" name="nom" id="nom"/><br />
-            <label for="prenom"> Prenom </label>
-            <input type ="text" name="prenom" id="prenom"/><br />
-            <label for="birthday"> Date de naissance </label>
-            <input type ="date" name="birthday" id="birthday"/><br />
-            <label for="Adresse"> Adresse postale </label>
-            <input type ="text" name="Adresse" id="Adresse"/><br />
-            <label for="mail"> Adresse Email </label>
-            <input type ="email" name="mail" id="mail"/><br />
+        <tr>
+                <td><label for="nom"> Nom </label></td>
+                <td><input type ="text" name="nom" id="nom" required/><br /></td>
+        </tr>
+        <tr>
+                <td><label for="prenom"> Prenom </label></td>
+                <td><input type ="text" name="prenom" id="prenom" required/><br /></td>
+        </tr>
+        <tr>
+                <td><label for="birthday"> Date de naissance </label></td>
+                <td> <input type ="date" name="birthday" id="birthday" required/><br /></td>
+        </tr>    
+        <tr>
+                <td> <label for="Adresse"> Adresse postale </label></td>
+                <td> <input type ="text" name="Adresse" id="Adresse" required/><br /></td>
+        </tr>
+        <tr>
+                <td> <label for="mail"> Adresse Email </label></td>
+                <td> <input type ="email" name="mail" id="mail" required/><br /></td>
+        </tr>
             
             
             
