@@ -1,0 +1,13 @@
+#error{
+    background-color: pink;
+    padding-top: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+#resultat{
+    background-color:green;
+    padding-top: 5px;
+    color:white;
+
+}
