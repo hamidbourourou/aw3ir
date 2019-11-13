@@ -5,11 +5,13 @@
     border-width: 1px;
     border-color: black;
     display: none;
+    border-radius: 5px;
 }
 #resultat{
     background-color:green;
     padding-top: 5px;
     color:white;
     display: none;
+    border-radius: 5px;
 
 }
