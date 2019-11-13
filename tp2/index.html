@@ -1,73 +1,76 @@
 <!doctype html>
 <html>
-    <head>
-        <script type="text/javascript" src="formulaire.js"></script>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="formulaire.css">
+<head>
+    <script type="text/javascript" src="formulaire.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TP2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp2</h1>
-        
-        <form on submit ="validation()">
-            <table>
-        <tr>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="formulaire.css">
+
+    <style>
+        body {
+            background-color: #e9ebee;
+            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+    </style>
+
+    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <!--<script src="js/main.js"></script>-->
+</head>
+
+<body>
+    <h1>tp2</h1>
+
+    <form on submit="validation()">
+        <table>
+            <tr>
                 <td><label for="nom"> Nom </label></td>
-                <td><input type ="text" name="nom" id="nom" required/><br /></td>
-        </tr>
-        <tr>
+                <td><input type="text" name="nom" id="nom" required /><br /></td>
+            </tr>
+            <tr>
                 <td><label for="prenom"> Prenom </label></td>
-                <td><input type ="text" name="prenom" id="prenom" required/><br /></td>
-        </tr>
-        <tr>
+                <td><input type="text" name="prenom" id="prenom" required /><br /></td>
+            </tr>
+            <tr>
                 <td><label for="birthday"> Date de naissance </label></td>
-                <td> <input type ="date" name="birthday" id="birthday" required/><br /></td>
-        </tr>    
-        <tr>
+                <td> <input type="date" name="birthday" id="birthday" required /><br /></td>
+            </tr>
+            <tr>
                 <td> <label for="Adresse"> Adresse postale </label></td>
-                <td> <input type ="text" name="Adresse" id="Adresse" required/><br /></td>
-        </tr>
-        <tr>
+                <td> <input type="text" name="Adresse" id="Adresse" required /><br /></td>
+            </tr>
+            <tr>
                 <td> <label for="mail"> Adresse Email </label></td>
-                <td> <input type ="email" name="mail" id="mail" required/><br /></td>
-        </tr>
-            
-    </table>
-            
-                <input type ="button" value="Valider!" onclick="validation()"/>
-           </form>
+                <td> <input type="email" name="mail" id="mail" required /><br /></td>
+            </tr>
 
-           <div id="error">
-               
-        
-        
-        
-        </div>
-        <div id="resultat" >
-            
-        
-        
-        
-        </div>
-    </body>
+        </table>
+
+        <input type="button" value="Valider!" onclick="validation()" />
+    </form>
+
+    <div id="error">
+
+
+
+
+    </div>
+    <div id="resultat">
+
+
+
+
+    </div>
+</body>
+
 </html>
