@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <script src="js/popper.min.js"></script>
+    <script src="js/form-jquery-validation.js"></script>
 
     <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
     <script src="js/bootstrap.min.js"></script>
@@ -35,37 +36,40 @@
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
     </head>
-    <body>   
-                
-            <div class="container">
-                    
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputName">Nom</label>
-                            <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
-                                placeholder="Entrez votre Nom">
-                            
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPrenom">Prenom</label>
-                            <input type="text" class="form-control" id="exampleInputPrenom" placeholder="Entrez votre Prenom">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputDate">Date de naissance</label>
-                            <input type="date" class="form-control" id="exampleInputDate" placeholder="JJ/MM/AAAA">
-                        </div>
-                        <label for="exampleInputAdresse">Address</label>
-                        <input type="text" class="form-control" id="exampleInputAdresse" aria-describedby="emailHelp" placeholder="Enter email">
-                        
-                        </div>
-                        <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                            
-                            <button type="submit" class="btn btn-primary">Valider</button>
-                          </form>
-                  </div>
-    </body>
+    <body>
     
+        <div class="container">
+    <h1> <center> TP3 AW Formulaire </center>  </h1>
+    <h5> Avec bootstrap et jquery </h5>
+
+            <form id="monFormulaire" method="post" action="#">
+                <div class="form-group">
+                    <label for="exampleInputName">Nom</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                        placeholder="Entrez votre Nom">
+    
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPrenom">Prenom</label>
+                    <input type="text" class="form-control" id="exampleInputPrenom" placeholder="Entrez votre Prenom">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputDate">Date de naissance</label>
+                    <input type="date" class="form-control" id="exampleInputDate" placeholder="JJ/MM/AAAA">
+                </div>
+                <div class="form-group">
+                <label for="exampleInputAdresse">Address</label>
+                <input type="text" class="form-control" id="exampleInputAdresse" aria-describedby="emailHelp"
+                    placeholder="Entrez votre address">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
+                placeholder="Entrez votre email">
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+        </div>
+    </body>
 </html>
