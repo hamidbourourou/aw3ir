@@ -19,6 +19,15 @@
     <script src="js/popper.min.js"></script>
     <script src="js/form-jquery-validation.js"></script>
     <script type="text/javascript" src="jquery.validate.min.js"></script>
+    <script>
+
+
+        $().ready(function () {
+            $("#mainForm").validate(
+                {
+
+                });
+        });</script>
 
     <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
     <script src="js/bootstrap.min.js"></script>
@@ -43,7 +52,7 @@
     <h1> <center> TP3 AW Formulaire </center>  </h1>
     <h5> Avec bootstrap et jquery </h5>
 
-            <form id="monFormulaire" method="post" action="#">
+            <form id="mainForm" method="post" action='#'>
                 <div class="form-group">
                     <label for="exampleInputName">Nom</label>
                     <input type="text" class="form-control" name="nom" id="exampleInputName" aria-describedby="emailHelp"
