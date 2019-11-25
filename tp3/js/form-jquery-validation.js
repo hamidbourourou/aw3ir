@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $("#mainForm").validate({
         rules: {
             "nom": {
@@ -22,16 +23,15 @@ $(document).ready(function () {
             },
             "date":{
 
-
+                
             }
         },
-        messages: {
-            nom: <div class="alert alert-primary" role="alert">
-                This is a primary alert—check it out!
-</div>,
-            prenom: "Veuillez fournir un prenom d'au moins trois lettres",
-            email: "L'email est incorrect",
+        messages : {
+            nom : "Veuillez fournir un nom d'au moins trois lettres",
+            prenom : "Veuillez fournir un prenom d'au moins trois lettres",
+            email : "L'email est incorrect",
             adresse: " Veuillez fournir une adresse valide"
-        }
+          }
     })
+    $('#myModal').modal("show");
 });
