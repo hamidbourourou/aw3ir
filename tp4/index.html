@@ -15,7 +15,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/form-jquery-validation.js"></script>
+    
     <script src="js/gps.js"></script>
 
 </head>
@@ -87,12 +87,15 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="submit" id="ajouter" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </form>
 
-        
+        <script src="js/form-jquery-validation.js"></script>
+        <p style="color:red;" id="erreur">
+
+        </p>
 
         <hr>
         <h4>Liste des contacts</h4>
