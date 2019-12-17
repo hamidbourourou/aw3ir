@@ -1,5 +1,5 @@
 document.getElementById("form1").addEventListener("submit", function (e) {
-e.preventDefault;
+e.preventDefault();
     var y = "https://maps.googleapis.com/maps/api/staticmap?markers=" + $("#adresse").val() + "&zoom=12&size=200x150&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
     var erreur;
     var nom = document.getElementById("name");
@@ -25,16 +25,17 @@ e.preventDefault;
     }
 
     if (erreur) {
-e.preventDefault;
-document.getElementById("erreur").innerHTML=erreur; 
-
+e.preventDefault();
+        $(".hello").text(erreur);
+        $('#myModal').modal('show');
     }
     else {
 
-        alert("formulaire envoyé ")
+        $(".modal-title").text("Welcome" + " " + nom.value);
 
 
 
+        $(".modal-body").html("Vous etes nés le" + " " + $(" #birth").val() + " " + "et vous habitez" + '<img src="' + y + '"  />');
     }
 
 
