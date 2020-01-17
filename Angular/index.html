@@ -7,11 +7,19 @@
     </title>
 </head>
 
-<body ng-app >
-    <input type="text" ng-model ="task"/>
+<body ng-app>
+    <input type="text" ng-model="task" />
     {{task}}
+    <div ng-init="users=[ 
+    {nom:'hamid',phone:'16'},
+    {nom:'yanis',phone:'07'},
+    {nom:'samy',phone:'00'}]">
+        <ul>
+            <li ng-repeat="user in users"> {{user}} </li>
+        </ul>
 
-    <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js></script>
-</body>
+    </div>
 
-</html>
+
+
+    <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js> </script> </body> </html>
