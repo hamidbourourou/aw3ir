@@ -8,17 +8,38 @@
 </head>
 
 <body ng-app>
-    <input type="text" ng-model="task" />
-    {{task}}
-    <div ng-init="users=[ 
+    
+    <div ng-init="friends=[ 
     {nom:'hamid',phone:'16'},
     {nom:'yanis',phone:'07'},
-    {nom:'samy',phone:'00'}]">
-        <ul>
-            <li ng-repeat="user in users"> {{user}} </li>
-        </ul>
-
+    {nom:'samy',phone:'00'},
+    {nom:'samir',phone:'00'}
+    
+  ]">
+    
     </div>
+   
+    
+<label>Search: <input ng-model="searchText"></label>
+<table id="searchTextResults">
+    <tr><th>Name</th><th>Phone</th></tr>
+    <tr ng-repeat="friend in friends | filter:searchText">
+      <td>{{friend.nom}}</td>
+      <td>{{friend.phone}}</td>
+    </tr>
+  </table>
+  <hr>
+  <label>Any: <input ng-model="search.$"></label> <br>
+  <label>Name only <input ng-model="search.nom"></label><br>
+  <label>Phone only <input ng-model="search.phone"></label><br>
+
+  <table id="searchObjResults">
+    <tr><th>Name</th><th>Phone</th></tr>
+    <tr ng-repeat="friendObj in friends | filter:search |orderBy:'+nom'">
+      <td>{{friendObj.nom}}</td>
+      <td>{{friendObj.phone}}</td>
+    </tr>
+  </table>
 
 
 
