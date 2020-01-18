@@ -1,0 +1,20 @@
+<div ng-controller=CommentsCtrl>
+    <input type="text" ng-model="querry" />
+    <select ng-model="order">
+        <option value="username"> Oerganiser par username </option>
+        <option value="content"> Oerganiser par contenu </option>
+
+
+    </select>
+
+    
+        <div ng-repeat="comment in comments|filter:{content:querry}|orderBy:order">
+
+            <p>
+                <strong>{{comment.username}}</strong><br>
+                {{comment.content}}
+
+            </p>
+
+        </div>
+    </div>
