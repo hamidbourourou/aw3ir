@@ -7,40 +7,81 @@
     </title>
 </head>
 
-<body ng-app>
-    
-    <div ng-init="friends=[ 
-    {nom:'hamid',phone:'16'},
-    {nom:'yanis',phone:'07'},
-    {nom:'samy',phone:'00'},
-    {nom:'samir',phone:'00'}
-    
-  ]">
-    
-    </div>
-   
-    
-<label>Search: <input ng-model="searchText"></label>
-<table id="searchTextResults">
-    <tr><th>Name</th><th>Phone</th></tr>
-    <tr ng-repeat="friend in friends | filter:searchText">
-      <td>{{friend.nom}}</td>
-      <td>{{friend.phone}}</td>
-    </tr>
-  </table>
-  <hr>
-  <label>Any: <input ng-model="search.$"></label> <br>
-  <label>Name only <input ng-model="search.nom"></label><br>
-  <label>Phone only <input ng-model="search.phone"></label><br>
+<body ng-app  = "myApp">
+   <div ng-view></div>
 
-  <table id="searchObjResults">
-    <tr><th>Name</th><th>Phone</th></tr>
-    <tr ng-repeat="friendObj in friends | filter:search |orderBy:'+nom'">
-      <td>{{friendObj.nom}}</td>
-      <td>{{friendObj.phone}}</td>
-    </tr>
-  </table>
+
+    <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js> </script>
+    <script src=https://code.angularjs.org/1.7.9/angular-route.min.js></script>
+     <script>
+        var app = angular.module("myApp", ['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when('/',{templateUrl:'partials/home.html'})
+            .when('/comments',{templateUrl:'partials/comments.html'})
+            .otherwise({redirectTo:'/'});
 
 
 
-    <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js> </script> </body> </html>
+
+        });
+   app.controller("CommentsCtrl", function($scope){
+
+         
+            $scope.comments = [
+                {
+                    "username": "Megan",
+                    "city": "Kiskimere",
+                    "email": "meganhaynes@quantalia.com",
+                    "content": "Laboris laboris officia nostrud eu amet."
+                },
+                {
+                    "username": "Kaitlin",
+                    "city": "Caspar",
+                    "email": "kaitlinhaynes@quantalia.com",
+                    "content": "Quis non adipisicing qui laboris tempor labore voluptate incididunt ea enim proident."
+                },
+                {
+                    "username": "Wolf",
+                    "city": "Islandia",
+                    "email": "wolfhaynes@quantalia.com",
+                    "content": "Dolor incididunt laboris consequat qui dolore proident magna."
+                },
+                {
+                    "username": "Adkins",
+                    "city": "Tetherow",
+                    "email": "adkinshaynes@quantalia.com",
+                    "content": "Amet mollit enim mollit proident."
+                },
+                {
+                    "username": "Mariana",
+                    "city": "Walton",
+                    "email": "marianahaynes@quantalia.com",
+                    "content": "Esse aute sint consequat cillum fugiat."
+                },
+                {
+                    "username": "Snider",
+                    "city": "Talpa",
+                    "email": "sniderhaynes@quantalia.com",
+                    "content": "Esse anim aliquip proident occaecat."
+                },
+                {
+                    "username": "Morgan",
+                    "city": "Yonah",
+                    "email": "morganhaynes@quantalia.com",
+                    "content": "Voluptate anim eu mollit dolore Lorem enim enim laboris amet id officia do cillum voluptate."
+                }
+
+
+                
+            ];
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
