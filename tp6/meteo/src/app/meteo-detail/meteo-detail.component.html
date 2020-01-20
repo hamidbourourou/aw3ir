@@ -11,7 +11,7 @@
   
     <div class="card" style="width:300px; margin: 0 auto" v-if="meteo">
       <div class="card-header">
-        {{meteo.name}} @{{meteo.dt | date:'EEEE, MMMM d, y, h:mm:ss a zzzz'}}
+        {{meteo.name}} @{{meteo.dt | date:'medium'}}
       </div>
       <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
         alt="Card image cap">
@@ -34,10 +34,10 @@
           <i class="wi wi-windy"></i> Vent: {{meteo.wind.speed}} km/h
         </li>
         <li class="list-group-item">
-          <i class="wi wi-sunrise"></i> Levé du soleil: {{meteo.sys.sunrise}} // Date au format Timestamp à transformer au format 'H:mm'
+          <i class="wi wi-sunrise"></i> Levé du soleil: {{meteo.sys.sunrise| date:'H:mm'}}
         </li>
         <li class="list-group-item">
-          <i class="wi wi-sunset"></i>Couché du soleil: {{meteo.sys.sunset}} // Date au format Timestamp à transformer au format 'H:mm'
+          <i class="wi wi-sunset"></i>Couché du soleil: {{meteo.sys.sunset| date:'H:mm'}} 
         </li>
       </ul>
     </div>

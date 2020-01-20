@@ -6,7 +6,8 @@ import { DatePipe } from '@angular/common';
 
 
 @Component({
-  selector: 'app-meteo-detail',
+  selector: "[app-meteo-detail],[date-pipe]",
+  
   templateUrl: './meteo-detail.component.html',
   styleUrls: ['./meteo-detail.component.css']
 })
@@ -19,6 +20,7 @@ export class MeteoDetailComponent implements OnInit {
     private meteoService: MeteoService,
     private location: Location
   ) {}
+  
 
   ngOnInit() {
     this.getMeteo();
@@ -32,4 +34,7 @@ export class MeteoDetailComponent implements OnInit {
       .catch(fail => this.meteo = fail);
   }
 
+}
+export class DatePipeComponent {
+  today: number = Date.now();
 }
